@@ -1,0 +1,23 @@
+{
+  "course": "目标课程名称（替换为当次课程）",
+  "class": "目标班级 / 教学班",
+  "semester": "2026 秋",
+  "assignment": "第六章作业",
+  "maxScore": 10,
+  "scoreStep": 0.5,
+  "totalStudents": null,
+  "gradedBefore": null,
+  "requiredItems": [
+    "思维导图（6.0）",
+    "6.11",
+    "6.19",
+    "6.32",
+    "6.46",
+    "6.51",
+    "6.62"
+  ],
+  "gradeUrl": "<本次批改页 URL，仅在本机使用>",
+  "answerFile": "answers.local/ch6.md",
+  "rubricFile": "rubrics/ch6.md",
+  "notes": "classroom_id / exam_id 等内部参数只放在本文件的本地副本中，不要提交到公开仓库。"
+}

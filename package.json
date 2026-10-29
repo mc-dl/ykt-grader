@@ -1,0 +1,26 @@
+{
+  "name": "ykt-grader",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "雨课堂网页作业批改工具箱：Agent 知识包 + Playwright/CDP 自动化脚本",
+  "keywords": ["yuketang", "rain-classroom", "grading", "playwright", "cdp", "teaching-assistant"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "status": "node scripts/status.mjs",
+    "remaining": "node scripts/remaining.mjs",
+    "roster": "node scripts/roster.mjs",
+    "harvest": "node scripts/harvest.mjs",
+    "grab": "node scripts/grab.mjs",
+    "dlpdf": "node scripts/dlpdf.mjs",
+    "submit": "node scripts/submit.mjs",
+    "verify": "node scripts/verify.mjs",
+    "fixscores": "node scripts/fixscores.mjs",
+    "report": "node scripts/report.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

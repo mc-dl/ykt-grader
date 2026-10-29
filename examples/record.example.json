@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-28",
+  "timezone": "Asia/Shanghai",
+  "course": "目标课程",
+  "assignment": "第六章作业",
+  "ruleFile": "rubrics/ch6.md",
+  "order": "批改页列表顺序",
+  "totalSubmitted": 167,
+  "gradedBeforeSession": 68,
+  "gradedInSession": 99,
+  "gradedTotal": 167,
+  "scoreDistribution": {
+    "10": 45,
+    "9.5": 55,
+    "9": 40,
+    "8.5": 5,
+    "8": 14,
+    "7.5": 2,
+    "7": 6
+  },
+  "workflow": "harvest 抓附件 → 读图（可并行）→ submit 串行写回 → verify 抽查",
+  "issues": [
+    "分数按钮子串匹配导致个别学生多 0.5，已改用输入框精确写分并返工",
+    "题干弹层遮挡学生卡片，需要隐藏或刷新",
+    "部分 PDF 不产生画布，需下载原文件后渲染"
+  ],
+  "privacyNote": "本记录为匿名模板；真实名单、附件与逐人明细只保存在本机 data/，不提交到仓库。"
+}

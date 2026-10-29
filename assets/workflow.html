@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ykt-grader · 雨课堂网页批改流程</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#f3f6fb;color:#17283f;font:16px/1.7 "Microsoft YaHei","PingFang SC",sans-serif}
+  main{max-width:1080px;margin:40px auto;padding:0 24px}
+  h1{margin:0;font-size:30px}
+  .sub{color:#4b5e75;margin:6px 0 0}
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+  .card{background:#fff;border:1px solid #d6e1ee;border-radius:14px;padding:20px;box-shadow:0 4px 18px #14294306}
+  .n{background:#e7f0ff;color:#1765d2;border-radius:6px;display:inline-block;padding:1px 10px;font-weight:700}
+  .card h2{font-size:18px;margin:10px 0}
+  .card p{margin:0;font-size:14px;color:#4b5e75}
+  .alert{background:#fff4dd;border-left:5px solid #d38a12;padding:16px 20px;border-radius:8px;font-size:15px}
+  .ok{background:#e6f4ed;border-left:5px solid #198457;padding:16px 20px;border-radius:8px;margin-top:16px;font-size:15px}
+  a{color:#1765d2;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .links{margin-top:22px;font-size:14px;color:#4b5e75}
+  @media(max-width:760px){.flow{grid-template-columns:1fr}main{margin:24px auto}}
+  @media print{body{background:#fff}.card{break-inside:avoid;box-shadow:none}main{margin:0 auto}}
+</style>
+<main>
+  <h1>雨课堂网页作业批改</h1>
+  <p class="sub">抓附件 → 读作业 → 对答案 → 写评语与分数 → 核验保存</p>
+
+  <div class="flow">
+    <div class="card"><span class="n">01</span><h2>连接并确认页面</h2><p>Chrome 以调试端口启动并登录，复用批改标签。先读当前页面，核对课程、作业与批改率。</p></div>
+    <div class="card"><span class="n">02</span><h2>看清题干与范围</h2><p>打开题干详情，记录题号与要求；确认本次人数、排序依据，以及是否提交。</p></div>
+    <div class="card"><span class="n">03</span><h2>抓取并读完全部附件</h2><p>图片、PDF、内嵌画布都要抓。旋转、切半页、放大，确保每一页都看过。</p></div>
+    <div class="card"><span class="n">04</span><h2>对答案并定分</h2><p>先核对题纸参数，再按题判断方法、过程、结果。按档给分，书写可 +0.5。</p></div>
+    <div class="card"><span class="n">05</span><h2>先评语，再写分数</h2><p>评语要点出题号、错因与正确值。极速打分会立即保存并跳到下一位。</p></div>
+    <div class="card"><span class="n">06</span><h2>核验并按数量停止</h2><p>确认批改成功、人数 +1、卡片分数正确；抽查读回后汇总，达到人数立即停止。</p></div>
+  </div>
+
+  <div class="alert">
+    <strong>两处最容易出错</strong><br>
+    ① 点分数就是提交，页面会自动换人——写完必须重新确认学生身份，不能连续盲点。<br>
+    ② 分数按钮是文本匹配，<code>9</code> 会命中 <code>9.5</code>——用输入框精确写分。
+  </div>
+
+  <div class="ok">
+    <strong>数据边界</strong><br>
+    学生附件、姓名、分数、截图只保存在本机 <code>data/</code>，不进入仓库、不发给外部服务。
+  </div>
+
+  <p class="links">
+    <a href="../README.md">README</a> ·
+    <a href="../SKILL.md">Agent 入口</a> ·
+    <a href="../docs/workflow.md">详细流程</a> ·
+    <a href="../docs/grading.md">评分规则</a> ·
+    <a href="../docs/privacy.md">脱敏说明</a>
+  </p>
+</main>
+</html>
